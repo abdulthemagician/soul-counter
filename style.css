@@ -5,6 +5,7 @@
     --increaseButtonHoverColor: #FF0000;
     --resetButtonColor: #C3D826;
     --resetButtonHoverColor: #e7ff31;
+    --viewport-height-px: 900px;
 }
 *{
     padding: 0;
@@ -16,7 +17,7 @@ html{
 .column-container{
     display: grid;
     /* grid-auto-columns: 1fr 1fr 1fr; */
-    min-width: 1vh;
+    min-width: calc((1 * var(--viewport-height-px)) / 100);
     grid-column: 1 / 3;
     justify-self: center;
     align-self: center;
@@ -30,8 +31,8 @@ html{
 .counter-box{
     display: flex;
     flex-direction: column;
-    width: 25vw;
-    min-height: 50vh;
+    min-width: 350px;
+    min-height: 400px;
     background-color: var(--counterBoxColor);
     border: 2px solid var(--borderColor);
     border-radius: 10px;
@@ -43,8 +44,8 @@ html{
     display: flex;
     background-color: white;
     border-radius: 40px;
-    width: 20vw;
-    height: 13vh;
+    min-width: 288px;
+    min-height: 80px;
     align-items: center;
     justify-content: center;
     font-size: clamp(4rem, 5vw, 6rem);
@@ -53,19 +54,20 @@ html{
 }
 .increaseButton{
     cursor: pointer;
-    width: 12vw;
-    height: 9vh;
+    min-width: 200px;
+    min-height: 70px;
     border: 2px solid var(--borderColor);
     border-radius: 20px;
     background-color: var(--increaseButtonColor);
     font-size: clamp(2rem, 3vw, 3rem);
     font-weight: 400;
+    margin-top: 5%
 }
 
 .resetButton{
     cursor: pointer;
-    width: 9vw;
-    height: 6vh;
+    min-width: 130px;
+    min-height: 60px;
     background-color: var(--resetButtonColor);
     border: 2px solid var(--borderColor);
     border-radius: 20px;
@@ -89,19 +91,19 @@ html{
 @media only screen and (max-width: 480px){
     .counter-box{
         width: 90vw;
-        height: 85vh;
+        min-height: calc((85 * var(--viewport-height-px)) / 100);
     }
     .display{
         width: 80vw;
-        height: 20vh;
+        min-height: calc((20 * var(--viewport-height-px)) / 100);
     }
     .increaseButton{
         width: 64vw;
-        height: 20vh;
+        min-height: calc((20 * var(--viewport-height-px)) / 100);
     }
     .resetButton{
         width: 45vw;
-        height: 20vh
+        min-height: calc((20 * var(--viewport-height-px)) / 100)
     }
 }
 
@@ -130,27 +132,27 @@ html{
 @media only screen and (min-width: 768px) and (max-width: 1024px){
     .counter-box{
         width: 86vw;
-        height: 75vh;
+        min-height: calc((75 * var(--viewport-height-px)) / 100);
         gap: 10%;
     }
     .display{
         width: 70vw;
-        height: 14vh
+        min-height: calc((14 * var(--viewport-height-px)) / 100)
     }
     .increaseButton{
         width: 60vw;
-        height: 15vh;
+        min-height: calc((15 * var(--viewport-height-px)) / 100);
     }
     .resetButton{
         width: 35vw;
-        height: 15vh;
+        min-height: calc((15 * var(--viewport-height-px)) / 100);
     }
     
 }
 @media only screen and (min-width: 1025px) and (max-width: 1366px){
     .counter-box{
         width: 95vw;
-        height: 85vh;
+        min-height: calc((85 * var(--viewport-height-px)) / 100);
         display: grid;
         grid-template-columns: 1.1fr 1fr;
         /* gap: 5px; */
@@ -160,7 +162,7 @@ html{
         grid-column: 2;
         grid-row: 1 / 3;
         width: 40vw;
-        height: 70vh;
+        min-height: calc((70 * var(--viewport-height-px)) / 100);
         margin-top: 0;
     }
     .increaseButton{
@@ -169,7 +171,7 @@ html{
         margin-left: 10%;
         margin-bottom: -20%;
         width: 45vw;
-        height: 20vh;
+        min-height: calc((20 * var(--viewport-height-px)) / 100);
     }
     .resetButton{
         grid-column: 1;
@@ -177,6 +179,6 @@ html{
         margin-left: 10%;
         margin-top: -20%;
         width: 25vw;
-        height: 18vh;
+        min-height: calc((18 * var(--viewport-height-px)) / 100);
     }
 }
