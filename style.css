@@ -31,7 +31,7 @@ html{
     display: flex;
     flex-direction: column;
     width: 25vw;
-    height: 50vh;
+    min-height: 50vh;
     background-color: var(--counterBoxColor);
     border: 2px solid var(--borderColor);
     border-radius: 10px;
@@ -105,8 +105,26 @@ html{
     }
 }
 
-@media only screen and (min-width: 481) and (max-width: 767px){
-    
+@media only screen and (min-width: 481px) and (max-width: 767px){
+    .counter-box{
+        width: 80vw;
+        min-height: 500px;
+    }
+    .display{
+        width: 70vw;
+        min-height: 100px;
+    }
+    .increaseButton{
+        margin-top: 8%;
+        width: 50vw;
+        min-height: 100px;
+    }
+    .resetButton{
+        margin-top: 5%;
+        width: 30vw;
+        min-height: 70px
+    }
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px){
